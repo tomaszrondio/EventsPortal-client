@@ -1,0 +1,27 @@
+.dropdown {
+	position: relative;
+
+	&__trigger {
+		cursor: pointer;
+		&:after {
+			content: 'keyboard_arrow_down';
+			font-family: 'Material Icons';
+			vertical-align: bottom;
+		}
+	}
+
+	&__content {
+		opacity: 0;
+		pointer-events: none;
+		transition: all .3s;
+		position: absolute;
+		background: #fff;
+		padding: 10px;
+		border: 1px solid $gray;
+	}
+
+	&:hover &__content {
+			opacity: 1;
+			pointer-events: auto;
+	}
+}

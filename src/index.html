@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title><%= htmlWebpackPlugin.options.title %></title>
+
+  <meta name="description" content="<%= htmlWebpackPlugin.options.title %>">
+
+  <% if (webpackConfig.htmlElements.headTags) { %>
+  <!-- Configured Head Tags  -->
+  <%= webpackConfig.htmlElements.headTags %>
+  <% } %>
+
+  <!-- base url -->
+  <base href="<%= htmlWebpackPlugin.options.metadata.baseUrl %>">
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+  <div class="header container-fluid">
+    <div class="col">
+      <a href="/" class="header__logo">
+        <img src="assets/img/logo.svg" alt="tvs"/>
+      </a>
+    </div>
+    <div class="col-7">
+      <i class="fa fa-search colorGray" aria-hidden="true"></i>
+    </div>
+    <div class="col">
+      <div class="dropdown pull-right">
+        <div class="dropdown__trigger">
+          Aleksandar Jelicic
+        </div>
+        <div class="dropdown__content">
+          some options <br />
+          some options <br />
+          some options <br />
+          some options <br />
+          some options <br />
+          some options <br />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="paneLayout">
+    <div class="paneLayout__sidebar navButtons">
+      <a href="#" class="navButtons__item navButtons__item--active">
+        <i class="fa fa-calendar-o" aria-hidden="true"></i>
+      </a>
+      <a href="#" class="navButtons__item">
+        <i class="fa fa-user" aria-hidden="true"></i>
+        <span class="navButtons__itemCounter">3</span>
+      </a>
+      <a href="#" class="navButtons__item">
+        <i class="fa fa-bolt" aria-hidden="true"></i>
+      </a>
+      <a href="#" class="navButtons__item">
+        <i class="material-icons">mail_outline</i>
+      </a>
+      <a href="#" class="navButtons__item">
+        <i class="material-icons">settings</i>
+      </a>
+    </div>
+    <div class="paneLayout__filters">
+      filters
+    </div>
+    <div class="paneLayout__content">
+      content
+    </div>
+    <div class="paneLayout__preview">
+      preview
+    </div>
+  </div>
+
+
+
+
+<!--
+  <app>
+    Loading...
+  </app>
+-->
+  <!-- Google Analytics: change UA-71073175-1 to be your site's ID 
+  <script>
+    (function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=r;A[l]=A[l]||function(){
+    (A[l].q=A[l].q||[]).push(arguments)},A[l].l=1*new Date();a=n.createElement(g),
+    r=n.getElementsByTagName(g)[0];a.async=1;a.src=u;r.parentNode.insertBefore(a,r)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-71073175-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+-->
+  <% if (htmlWebpackPlugin.options.metadata.isDevServer && htmlWebpackPlugin.options.metadata.HMR !== true) { %>
+  <!-- Webpack Dev Server reload -->
+  <script src="/webpack-dev-server.js"></script>
+  <% } %>
+
+
+</body>
+</html>

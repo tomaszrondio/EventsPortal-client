@@ -1,0 +1,45 @@
+.navButtons {
+	&__item {
+		display: block;
+		position: relative;
+		text-align: center;
+		line-height: 60px;
+		color: $gray;
+		font-size: 30px;
+
+		&:focus {
+			text-decoration: none;
+			color: $gray;
+		}
+		
+		&:hover {
+			color: #fff;
+		}
+
+		&--active{
+			color: #fff;
+			background-color: $blue;
+			&:focus {
+				color: #fff;
+			}
+		}
+
+		.material-icons {
+			font-size: 30px;
+		}
+	}
+
+	&__itemCounter {
+		display: inline-block;
+		position: absolute;
+		right: 10px;
+		bottom: 10px;
+		border-radius: 10px;
+		background: #66BB22;
+		color: #fff;
+		font-size: 11px;
+  		line-height: 1em;
+  		padding: .2em .4em;
+  		vertical-align: middle;
+	}
+}

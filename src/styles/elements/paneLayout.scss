@@ -1,0 +1,44 @@
+.paneLayout {
+    display: flex;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 60px;
+    overflow-x: hidden;
+
+    &__sidebar {
+    	flex: 0 0 60px;
+    	background-color: $darkerBlue;
+    	overflow-y: auto;
+    }
+
+    &__filters {
+    	flex: 0 0 250px;
+    	background-color: $darkBlue;
+    	padding: $space;
+    	overflow-y: auto;
+    }
+
+    &__content {
+        background-color: transparent;
+        width: 100%;
+        overflow-y: auto;
+        position: relative;
+    }
+    // right pane
+    &__preview {
+        background-color: #fff;
+        border-left: 4px solid $green;
+        flex: 0 0 400px;
+        overflow: hidden;
+        overflow-y: auto;
+        // margin instead of translateX because of automatic __content size
+        margin-right: -404px;
+        transition: all .3s;
+
+        &--open {
+            margin-right: 0;
+        }
+    }
+}
