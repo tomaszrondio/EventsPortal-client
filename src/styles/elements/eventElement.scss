@@ -1,0 +1,52 @@
+.eventElement {
+	display: flex;
+	background: #FFFFFF;
+	border-left: 4px solid $eventGray;
+	box-shadow: 1px 1px 2px 0 rgba(0,0,0,0.20);
+	padding: $space $space * 2 $space 1rem;
+	cursor: pointer;
+	margin-bottom: $space;
+
+	&--green {
+		border-color: $green
+	}
+
+	&--red {
+		border-color: $red;
+	}
+
+	&:hover {
+		box-shadow: 1px 7px 15px 3px rgba(0, 0, 0, 0.1);
+  		transform: scale(1.001);
+	}
+
+	&__date {
+		flex: 0 0 auto;
+  		width: auto;
+  		margin-right: 2rem;
+  		min-width: 4rem;
+  		padding-top: .5em;
+	}
+
+	&__content {
+		flex-basis: 0;
+  		flex-grow: 1;
+  		max-width: 100%;
+	}
+
+	&__contentBottom {
+		color: $textColor;
+  		font-size: 0.8rem;
+
+  		&__icon {
+			color: $gray;
+			font-size: 20px;
+			margin-left: .3rem;
+			vertical-align: middle;
+		}
+
+  		.label {
+  			margin-left: .5em;
+  		}
+	}
+}

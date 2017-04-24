@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
+
 @import '~bootstrap/scss/bootstrap-reboot';
 @import '~bootstrap/scss/bootstrap-grid';
 @import 'colors';
@@ -9,4 +11,9 @@
 @import 'elements/dropdown';
 @import 'elements/paneLayout';
 @import 'elements/navButtons';
+@import 'elements/dayList';
+@import 'elements/eventElement';
+@import 'elements/bigDate';
+@import 'elements/labels';
+@import 'elements/eventList';
 

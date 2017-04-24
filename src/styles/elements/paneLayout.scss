@@ -25,20 +25,31 @@
         width: 100%;
         overflow-y: auto;
         position: relative;
+        padding: $space $space * 2;
     }
-    // right pane
+    &__rightSidebar {
+        background-color: transparent;
+        flex: 0 0 30vw;
+        overflow-y: auto;
+        position: relative;
+        padding: $space $space * 2;
+    }
+
     &__preview {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
         background-color: #fff;
         border-left: 4px solid $green;
-        flex: 0 0 400px;
+        width: 30vw;
         overflow: hidden;
         overflow-y: auto;
-        // margin instead of translateX because of automatic __content size
-        margin-right: -404px;
+        transform: translateX(100%);
         transition: all .3s;
 
         &--open {
-            margin-right: 0;
+            transform: translateX(0); 
         }
     }
 }

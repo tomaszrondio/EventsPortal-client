@@ -6,6 +6,8 @@
 		line-height: 60px;
 		color: $gray;
 		font-size: 30px;
+		text-decoration: none;
+		transition: all .2s;
 
 		&:focus {
 			text-decoration: none;
@@ -16,7 +18,7 @@
 			color: #fff;
 		}
 
-		&--active{
+		&--active {
 			color: #fff;
 			background-color: $blue;
 			&:focus {
@@ -32,8 +34,9 @@
 	&__itemCounter {
 		display: inline-block;
 		position: absolute;
-		right: 10px;
-		bottom: 10px;
+		right: 6px;
+		bottom: 6px;
+		border: 2px solid $darkerBlue;
 		border-radius: 10px;
 		background: #66BB22;
 		color: #fff;
@@ -42,4 +45,9 @@
   		padding: .2em .4em;
   		vertical-align: middle;
 	}
+
+	&__item--active &__itemCounter {
+		border-color: $blue;
+	}
+
 }

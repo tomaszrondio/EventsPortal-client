@@ -1,0 +1,36 @@
+.bigDate {
+	text-align: center;
+
+	&__number {
+		display: block;
+		font-size: 1.8rem;
+		font-weight: 400;
+		line-height: 1em;
+		color: $eventGray;
+
+		&--green {
+			color: $green;
+		}
+
+		&--red {
+			color: $red;
+		}
+	}
+
+	&__month {
+		display: block;
+		color: $gray;
+		line-height: 1.6em;
+  		text-transform: uppercase;
+  		font-weight: 600;
+  		font-size: .8em;
+	}
+
+	&__day {
+		display: block;
+		color: $gray;
+		line-height: 1.4em;
+  		font-weight: 300;
+  		font-size: .7em;
+	}
+}

@@ -1,0 +1,9 @@
+$labelColor: #686F80;
+
+.label {
+	display: inline-block;
+	color: $labelColor;
+	border: 1px solid $labelColor;
+	border-radius: 2px;
+	padding: 0 .3em
+}

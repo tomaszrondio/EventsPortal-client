@@ -1,4 +1,20 @@
 body {
 	background-color: $bgColor;
-	font-family: "Lucida Grande", "Lucida Sans Unicode", "Garuda", "Malayalam", Arial, sans-serif;
+	font-family: 'Open Sans', 'Lucida Grande', 'Lucida Sans Unicode', 'Garuda', 'Malayalam', Arial, sans-serif;
+}
+
+.contentPadding {
+	padding: $space;
+}
+
+
+h3 {
+	color: $darkerBlue;
+	font-size: 1.1rem;
+	font-weight: 400;
+}
+
+p {
+	color: $textColor;
+	font-size: 0.9rem;
 }
